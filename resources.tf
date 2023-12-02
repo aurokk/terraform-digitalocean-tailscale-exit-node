@@ -12,7 +12,7 @@ resource "digitalocean_ssh_key" "main" {
 resource "digitalocean_droplet" "main" {
   image    = "debian-12-x64"
   name     = "tailscale-xn-001"
-  region   = "ams3"
+  region   = "fra1"
   size     = "s-1vcpu-1gb"
   ssh_keys = [digitalocean_ssh_key.main.fingerprint]
   tags     = [digitalocean_tag.main.id]
